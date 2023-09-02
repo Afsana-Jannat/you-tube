@@ -30,10 +30,13 @@ const handleLoadvideos = async (categoriId) => {
   else{
     imageContainer.style.display ="none"
   }
+
+
   // console.log(categoriId)
   data.data?.forEach((videos) => {
     
     console.log(videos);
+
     const div = document.createElement("div");
     
     div.innerHTML = `
@@ -52,16 +55,15 @@ const handleLoadvideos = async (categoriId) => {
               <p class="font-bold mx-2 mt-2">${videos?.authors[0]?.profile_name}</p>
               </div> 
               <p>${videos?.others?.views} views</p>
-              <span>${videos?.others?.posted_date}</span>
             </div>
           </div>
         `
-
     videosContainer.appendChild(div)
-   
-
+    
   })
-   
-  }
+}
+
+
 handleCategory()
 handleLoadvideos("1000");
+

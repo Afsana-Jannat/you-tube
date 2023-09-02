@@ -39,10 +39,10 @@ const handleLoadvideos = async (categoriId) => {
     div.innerHTML = `
     <div class="card bg-base-100 shadow-xl my-4">
             <figure>
-            <div>
+            
             <img class="w-86 h-40 mt-2"
              src=${videos?.thumbnail}/>
-             </div>
+             
             </figure>
             <div class="card-body">
               <h2 class="card-title">${videos?.title}</h2>
